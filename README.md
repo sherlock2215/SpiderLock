@@ -10,7 +10,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
-![Issues](https://img.shields.io/github/issues/yourusername/Spiderlock)
+![Issues](https://img.shields.io/github/issues/sherlock2215/SpiderLock)
 
 ---
 
