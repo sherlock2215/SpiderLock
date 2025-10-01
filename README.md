@@ -30,25 +30,32 @@
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/sherlock2215/SpiderLock.git
 cd SpiderLock
 ```
 
-2. Install dependencies (preferably in a virtual environment):
+2. Install dependencies in a virtual environment:
+
 ```bash
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 ```
 
 ---
 
+
 ## Usage
 
-Run the crawler from the command line:
+Run the crawler from the command line after activating the virtual environment:
 
 ```bash
 python crawler.py -w https://example.com [options]
 ```
+
 
 ### Available Options
  -----------------------------------------------------------------
