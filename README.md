@@ -1,6 +1,6 @@
 # Spiderlock
 
-![Logo](images/logo.png) 
+![Logo](images/SpiderLock.png) 
 
 **Spiderlock** is a Python web crawler designed for cybersecurity enthusiasts, pentesters, and web analysts. It supports both **breadth-first (BFS)** and **depth-first (DFS)** crawling strategies and can visualize website structures as a **2D graph**, showing pages and their connections.
 
