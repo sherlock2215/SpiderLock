@@ -17,7 +17,6 @@ class siteMap:
 
     # ---------------- JSON export ----------------
     def to_json(self, filename="crawler_results.json"):
-        """Saves the crawl graph dictionary to a JSON file."""
         try:
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(self.graph, f, indent=4)
@@ -65,21 +64,6 @@ class siteMap:
                 if link not in all_pages:
                     print(f"{page} -> {link}")
         print("")
-
-    # ---------------- Optional colored summary ----------------
-    def colored_summary(self):
-        """Prints a summary using colored terminal output (requires colorama)."""
-        try:
-            from colorama import Fore, Style
-        except ImportError:
-            print("Install colorama for colored output: pip install colorama")
-            return self.print_summary()
-
-        print(f"{Fore.GREEN}Total pages crawled: {len(self.graph)}{Style.RESET_ALL}")
-        print(f"{Fore.BLUE}HTTP(s) links: {sum(len(v['categorized_links']['http(s)_links']) for v in self.graph.values())}{Style.RESET_ALL}")
-        print(f"{Fore.YELLOW}Mailto links: {sum(len(v['categorized_links']['mail_links']) for v in self.graph.values())}{Style.RESET_ALL}")
-        print(f"{Fore.RED}Video links: {sum(len(v['categorized_links']['video_links']) for v in self.graph.values())}{Style.RESET_ALL}")
-        print(f"{Fore.MAGENTA}Image links: {sum(len(v['categorized_links']['image_links']) for v in self.graph.values())}{Style.RESET_ALL}\n")
 
     # ---------------- SEO audit ----------------
     def seo_audit(self):
@@ -137,3 +121,4 @@ class siteMap:
             print(f"\n{Fore.GREEN}All pages have H1 Tags.{Style.RESET_ALL}")
 
         print(f"{Fore.CYAN}=============================={Style.RESET_ALL}\n")
+
